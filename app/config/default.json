@@ -1,0 +1,20 @@
+{
+  "keycloak": {
+    "realm": "jbd6rnxw",
+    "serverUrl": "https://dev.oidc.gov.bc.ca/auth"
+  },
+  "server": {
+    "bodyLimit": "100mb",
+    "logLevel": "http",
+    "port": "3000"
+  },
+  "carbone": {
+    "cacheDir": "/tmp/carbone-files",
+    "cacheSize": "2GB",
+    "converterFactoryTimeout": "60000",
+    "formFieldName": "template",
+    "startCarbone": "true",
+    "uploadCount": "1",
+    "uploadSize": "25MB"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "keycloak": {
+    "clientId": "CDOGS",
+    "clientSecret": "b91c1a27-00b7-40f0-ba39-ac09dba40c88",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjqPFVdiZhC/C+KlbIUBG1p0IomJJ0QqCllFoFBLYPFlp5WRVY9qBCqKTqBhRdmGFvQDUBNwYtqFV5V+f7jjqml4tL3uwBLWw4QdTo0FCimouiOJ2p7Z2XFs86Tr8uLFBGLh5P7LTwEFAPm9w4g6KJUSgoTlazZwYuZHpVv+KqGAj86nLJ2PrGZngahFVMC4+5bJt15Gt7LnztvqW1HEPph2HpSBOdBW1iNeOcP2x/gD489pYjy5CsZgPOdO/tpFzIcAodRaNP/dCz03EuQH+/gtVNo+QmFSW8LTcDMGjlRYcyfzzaUUIIymIomqkGFQjVea/U9f+pgLcVQXQS2KhLQIDAQAB",
+    "realm": "jbd6rnxw",
+    "serverUrl": "https://dev.oidc.gov.bc.ca/auth"
+  },
+  "server": {
+    "bodyLimit": "100mb",
+    "logLevel": "http",
+    "port": "3000"
+  }
+}

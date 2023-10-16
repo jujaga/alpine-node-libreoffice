@@ -4,6 +4,7 @@ FROM docker.io/node:16.15.0-alpine
 
 ARG APP_ROOT=/opt/app-root/src
 ENV NO_UPDATE_NOTIFIER=true \
+  APP_PORT=3000 \
   PATH="/usr/lib/libreoffice/program:${PATH}" \
   PYTHONUNBUFFERED=1
 WORKDIR ${APP_ROOT}
@@ -23,3 +24,9 @@ RUN apk --no-cache add msttcorefonts-installer fontconfig && \
 COPY support ${APP_ROOT}/support
 RUN chmod a+rx ${APP_ROOT}/support/bindPython.sh \
   && ${APP_ROOT}/support/bindPython.sh
+
+COPY app ${APP_ROOT}
+RUN npm ci
+
+EXPOSE ${APP_PORT}
+CMD ["npm", "run", "start"]
