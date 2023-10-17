@@ -25,9 +25,15 @@ COPY support ${APP_ROOT}/support
 RUN chmod a+rx ${APP_ROOT}/support/bindPython.sh \
   && ${APP_ROOT}/support/bindPython.sh
 
+# NPM Permission Fixes
+RUN mkdir -p /.npm
+RUN chown -R 1001:0 /.npm
+
+# Install Application
 COPY app ${APP_ROOT}
-RUN npm ci && \
-  npm cache clean --force
+RUN chown -R 1001:0 ${APP_ROOT}
+USER 1001
+RUN npm ci
 
 EXPOSE ${APP_PORT}
 CMD ["npm", "run", "start"]
