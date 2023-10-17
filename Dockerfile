@@ -26,7 +26,8 @@ RUN chmod a+rx ${APP_ROOT}/support/bindPython.sh \
   && ${APP_ROOT}/support/bindPython.sh
 
 COPY app ${APP_ROOT}
-RUN npm ci
+RUN npm ci && \
+  npm cache clean --force
 
 EXPOSE ${APP_PORT}
 CMD ["npm", "run", "start"]
